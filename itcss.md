@@ -1,29 +1,57 @@
-# ITCSS
+# ARQUITECTURA ITCSS
 
-Separa el código css en varias capas, según su especificidad
+Metodología que permite parametrizar los estilos según niveles de especificidad separando los niveles de estilos en 7 capas
 
-## Settings
-No genera css, solo declara variables 
+- **Settings:** Declara variables de preprocesador (No genera css)
+- **Tools:** Declara funciones y Mixins (No genera css)
+- **Generic:** Código genérico del css, reset del css y normalize
+- **Tags (Elements):** estilos que afectan a los tags NO clases NI selectores anidados
+- **Objects:** clases reutilizables de manera genérica, ejem: clase container que está en muchos lados. Un bloque BEM podría ser un objeto
+- **Components:** Pieza concreta específica de la interfaz si se hace cambios Sus estilos no afectan a ningún otro item. Casi siempre un bloque BEM será un componente
+- **Utilities:** Estas clases tienen la capacidad de anular todos los estilos escritos anteriormente. Se permite el !important
 
-## Tools
-Mixins y funciones No genera css
+## Estructura
+Settings
+Tools (Functions - Mixins)
+Generic
+Tags
+Keyframes **(La capa de keyframes es opcional**
+Objects
+Components
+Utilities
 
-## Generic
-Reset Normalize
+Lo mejor es generar un mixin en la capa _tools_ para  definir las mediaqueries. Así solo se tendrá un punto de ruptura.
 
-## Tags (Elements)
-Estilos de los tags html h1 img
+## Ejemplo de mixin
+Ejemplo de mediaqueries
+~~~
+@mixin font-size ($size) {
+    font-size: $size;
+    font-size: calculated-rem($size);
+}
 
-## Objects
-Clases reutilizables en todo el proyecto de maner genérica
-ejem: clase container de un ancho máximo
-Un bloque BEM podría ser un objeto
+@mixin sm() {
+    @media (min-witdh: 501px){
+        @content;
+    }
+}
+@mixin sd() {
+    @media (min-witdh: 501px){
+        @content;
+    }
+}
 
-## Components
-Pieza concreta de la interfaz
-En casi todos los casos, un bloque BEM es un componente
+//Rango
+@mixin only-xs(){
+    @media (min-width: 0px) and (max-width:500px){
+        @content;
+    }
+}
+@mixin only-sm(){
+    @media (min-width: 501px) and (max-width1100px){
+        @content;
+    }
+}
+~~~
 
-## Utilities
-Capacidad de anular todo lo que se haya escrito antes Están permitidos los importants, no se debe abusar
-
-Las capas superiores tienen más alcance, pero las inferiores tienen más fuerza. Ante un conflicto de estilos, gana la capa inferior
+Todos los estilos de las clases deben estar en el mismo lugar. El estilo predeterminado del elemento, el responsive, las pseudoclases, etc. 

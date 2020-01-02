@@ -1,0 +1,33 @@
+
+//settings
+@import "settings/_settings";
+
+//Tools (Functions - Mixins)
+@import "tools/_functios";
+@import "tools/_mixins";
+
+//Generic
+@import "generic/_generic";
+
+//Tags
+@import "tags/_tags";
+
+//La capa de keyframes es opcional
+//Keyframes
+@import "keyframes/_keyframes";
+
+//Objects
+@import "objects/_container";
+@import "objects/_color";
+
+//Components
+@import "components/_footer";
+@import "components/_tabs";
+
+//Scopes (contexto)
+//Esta capa es opcional, propuesta por el curso
+@import "scopes/_scopes";
+
+//Utilities
+@import "utilities/_utilities"
+

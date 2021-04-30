@@ -1,0 +1,20 @@
+table tr:hover {
+  background-color: #dbd879;
+}
+
+section {
+  max-width: 800px;
+  margin-left: auto;
+  background-color: chocolate;
+}
+
+.card {
+  background-color: #80ff80;
+  color: black;
+}
+
+.button {
+  background-color: black;
+  color: white;
+}
+/*# sourceMappingURL=styles.css.map */

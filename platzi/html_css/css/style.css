@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  /* Esta propiedad suma el padding al total de ancho de los elementos, debe ir en el reset
+  El margin no es recalculado por box-sizing */
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav {
+  margin-top: 10px;
+  list-style: none;
+  padding-left: 0;
+  background-color: #13a4a4;
+}
+
+.main-nav__item {
+  display: inline-block;
+}
+
+.main-nav__item a {
+  color: #fff;
+  padding: 5px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  text-decoration: none;
+}
+
+/* *** Pseudoclases *** */
+/* *** Estilos de un estado (hover, active) *** */
+.main-nav__item a:hover {
+  color: blue;
+}
+
+.main-nav__item a:active {
+  color: red;
+}
+
+/* *** Pseudoelemento *** */
+/* *** Estilos de una parte específica del documento *** */
+.main-nav__item a:after {
+  content: " | ";
+}
+
+/* *** Box model *** */
+.main-model {
+  width: 100%;
+  height: 500px;
+  border: 10px solid gray;
+  padding: 20px 35px;
+}
+
+/* **** Especificidad **** */
+.box-nav {
+  margin-top: 10px;
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Tengo que apuntar a los selectores indicados */
+.box-nav li {
+  display: inline-block;
+}
+
+.box-nav a {
+  color: white;
+  background-color: #13a4a4;
+  padding: 5px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  text-decoration: none;
+}
+
+.box-nav .blog {
+  background-color: orange;
+}

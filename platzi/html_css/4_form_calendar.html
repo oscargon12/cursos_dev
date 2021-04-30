@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms-Calendar</title>
+</head>
+<body>
+    
+    <form action="">
+        <!-- Este debe ser siempre la estructura de un input. 
+            El for del label debe ser el mismo id del input -->
+        <label for="nombre">
+            <span>Cuál es tu nombre?</span>
+            <input type="text" id="nombre" placeholder="Nombre">
+        </label>
+        <label for="inicio">
+            <span>Cuando iniciaste en platzi?</span>
+            <input type="date" id="inicio" placeholder="Fecha de inicio">
+        </label>
+        <label for="horario">
+            <span>En qué horario estudias?</span>
+            <input type="time" id="horario" placeholder="Horario">
+        </label>
+    </form>
+
+    <br>
+    <hr>
+    <br>
+
+    <h3>Calendar</h3>
+    <form action="">
+        <label for="hora">
+            <span>Hora</span>
+            <input type="time" id="hora" name="hora">
+            <!-- El name es lo que se envía -->
+        </label>
+        <label for="dia">
+            <span>Día</span>
+            <input type="date" id="dia" name="dia">
+        </label>
+        <label for="semana">
+            <span>Semana</span>
+            <input type="week" id="semana" name="semana">
+        </label>
+        <label for="mes">
+            <span>Mes</span>
+            <input type="month" id="mes" name="mes">
+        </label>
+        <input type="submit">
+    </form>
+
+    <br>
+    <hr>
+    <br>
+
+    <!-- Fecha y hora en un mismo input -->
+    <form action="">
+        <label for="calendario">
+            <span>Calendario</span>
+            <input type="datetime-local" id="calendario" name="calendario">
+        </label>
+        <input type="submit">
+    </form>
+
+    <br>
+    <hr>
+    <br>
+
+    <!-- ***** Autocomplete y required ***** -->
+    <main>
+        <h3>Autocomplete y required</h3>
+        <section>
+            <p style="color: gray;">Puedo poner los atributos autocomplete y required en el input</p>
+            <form action="">
+                <label for="nombre">
+                    <span>Cuál es tu nombre</span>
+                    <input type="text" name="nombre" id="nombre" autocomplete="name" required>
+                </label>
+                <label for="correo">
+                    <span>Cuál es tu correo</span>
+                    <input type="email" name="correo" id="correo" autocomplete="email" required>
+                </label>
+                <label for="pais">
+                    <span>País</span>
+                    <input type="text" name="pais" id="pais" autocomplete="country" required>
+                </label>
+                <label for="cp">
+                    <span>Código postal</span>
+                    <input type="number" name="cp" id="cp" autocomplete="postal-code" required>
+                </label>
+                <input type="submit">
+            </form>
+        </section>
+        <br>
+        <hr>
+        <br>
+        
+        <!-- ***** Select ***** -->
+        <h3>Select</h3>
+        <section>
+            <form action="">
+                <p style="color: gray;">Esta sintaxis sirve para pocas opciones</p>
+
+                <select name="cursos" id="">
+                    <option value="javascript">javascript</option>
+                    <!-- El value es lo que se va a la base de datos -->
+                    <option value="HTML5">HTML5</option>
+                    <option value="CSS3">CSS3</option>
+                    <option value="Web Standar">Web Standar</option>
+                </select>
+
+                <p style="color: gray;">Este modelo me permite buscar en la lista, si no está, igual captura</p>
+                <input list="cursos">
+                <datalist id="cursos">
+                    <option value="javascript"></option>
+                    <option value="HTML5"></option>
+                    <option value="CSS3"></option>
+                    <option value="Web Standards"></option>
+                </datalist>        
+            </form>
+        </section>
+        <br>
+        <hr>
+        <br>
+        
+        <!-- ***** Buttons ***** -->
+        <h3>Buttons</h3>
+        <section>
+            <p style="color: gray;">Puedo usar botón tipo input para forms y button para otros botones</p>
+            <input type="submit" value="Nombre Boton">
+            <!-- Con value cambio el nombre del botón -->
+            <button type="submit">Envía datos</button>
+        </section>
+    </main>
+</body>
+</html>

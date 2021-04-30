@@ -1,0 +1,27 @@
+/* *** Hermano cercano *** */
+/* Aplica el atributo a los p que estén cerca (inmediatamente después) de un h2  */
+
+h2 + p {
+  color: orangered;
+}
+
+/* *** Hermano general *** */
+/* Aplica el atributo a los p que estén al mismo nivel (como hermano) de un h2  */
+
+h2 ~ p {
+  color: chocolate;
+}
+
+/* *** Hijo *** */
+/* Aplica el atributo a los p que sean hijos directos de un h2  */
+
+div > p {
+  color: orangered;
+}
+
+/* *** Descendiente *** */
+/* Aplica el atributo a los p que estén dentro de un h2 (Así no sean hijos directos) */
+
+div p {
+  color: cornflowerblue;
+}

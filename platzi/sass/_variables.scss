@@ -1,0 +1,130 @@
+$color-lightgrey: #bfbfbf;
+$color-error: red;
+$color-success: green;
+
+$basefontsize: 16px;
+
+
+
+// FUNCIONES
+// Primero escribo el color base mediante una variable
+$color-gray: #737373;
+
+// Luego le agrego funciones que permitan modificar ese color base
+$color-lightgray: lighten($color-gray, 25%);
+$color-darkegray: darken($color-gray, 25%);
+
+// Listado de funciones en: https://sass-lang.com/documentation/file.SASS_REFERENCE.html#functions
+// END -------------------
+
+
+// CREAR FUNCIONES
+@function suma($num-uno, $num-dos) {
+    @return $num-uno + $num-dos;
+}
+
+// Se usa
+.div {
+    padding: suma(10px, 5px);
+}
+
+//Compila
+.div{
+    padding: 15px;
+}
+// END -------------------
+
+
+//FUNCIONES ARRAY
+//Se crea el mapa$fs de font-size
+$fs:(
+    big: 24px,
+    normal: 16px,
+    small: 14px,
+    s-samll: 12px,
+)
+
+// Se usa
+p{
+    font-size: map-get($fs, normal);
+}
+
+//Compila
+p{
+    font-size: 16px;
+}
+
+// END -------------------
+
+
+//LISTAS Y DIRECTIVAS
+
+$font-weights: normal bold italic;
+
+@each $font in ($font-weights){
+    
+    // Esto se hace para acer un scape de la variable #{$variable}
+    .#{$font} {font-weight: $font;}
+}
+// Esto me crea una clase por cada uno y le asigna el norma, bold o italic
+
+// Compila
+.normal {
+    font-weight: normal;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-weight: italic;
+}
+// END -------------------
+
+
+// CICLOS FOR
+@for $i from 1 to 5 {
+    .class-·{$i} {
+        &:before {
+            content: "#{$i}" ;
+            // Escapo la variable para que no tome el $i como string
+        }
+    }
+}
+
+// Compila
+.class-1:before{
+    content: "1";
+}
+.class-2:before{
+    content: "2";
+}
+.class-3:before{
+    content: "3";
+}
+//...
+// END -------------------
+
+
+// CONDICIONALES
+p{
+    color: black;
+}
+
+$background-color: black;
+
+@if $background-color == true{
+    p{
+        color: white;
+    }
+}
+@else {
+
+}
+
+// Ver imágenes para entender como con condicionales puedo incluir o no hojas de estilo, según las necesite
+
+// END -------------------
+
+

@@ -1,0 +1,12 @@
+section {
+  @include max-width;
+}
+
+.card {
+  @include fondoclarito;
+}
+
+.button {
+  @include button-bg;
+}
+

@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "AEAA,AAAA,KAAK,CAAC,EAAE,AAAA,MAAM,CAAA;EACZ,gBAAgB,EDGA,OAAkB;CCFnC;;AEFD,AAAA,OAAO,CAAC;EDiBN,SAAS,EAAE,KAAK;EAChB,WAAW,EAAE,IAAI;EACjB,gBAAgB,EAAE,SAAS;CCjB5B;;AAED,AAAA,KAAK,CAAC;EDQJ,gBAAgB,EAJF,OAA4B;EAK1C,KAAK,EAAE,KAAK;CCPb;;AAED,AAAA,OAAO,CAAC;EDeN,gBAAgB,EAdH,KAA2B;EAexC,KAAK,EAAE,KAAK;CCdb",
+    "sources": [
+        "styles.scss",
+        "lib/_variables.scss",
+        "_tablas.scss",
+        "lib/_mixins.scss",
+        "layout/_layout.scss"
+    ],
+    "names": [],
+    "file": "styles.css"
+}

@@ -1,0 +1,34 @@
+// ---------------------
+// Mixins
+// ---------------------
+
+// 1 creo color original
+$color-success: green;
+
+//2 modifico el color original
+$verde-clarito: lighten($color-success, 50%);
+$verde-oscuro: darken($color-success, 50%);
+
+@mixin fondoclarito {
+  background-color: $verde-clarito;
+  color: black;
+}
+
+@mixin max-width {
+  max-width: 800px;
+  margin-left: auto;
+  background-color: chocolate;
+}
+
+@mixin button-bg {
+  background-color: $verde-oscuro;
+  color: white;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.container {
+  border: 0.3rem solid black;
+  display: flex;
+  flex-wrap: wrap; /* Hace que los elementos bajen automáticamente */
+  /* justify-content: space-evenly; */
+  /* space-evenly deja los espacios proporcionales, space-around no tanto */
+  /* height: 50vh; */
+  /*   align-items: start;
+ */
+}
+
+.box {
+  /* width: 10rem; */
+  height: 10rem;
+  flex-basis: 10rem;
+  flex-grow: 1;
+}
+
+.box1 {
+  background-color: chocolate;
+  /* flex-grow: 1; Esto permiten que crezcan para rellenar el espacio que falta */
+}
+.box2 {
+  background-color: cornflowerblue;
+  /* flex-grow: 1; */
+}
+.box3 {
+  background-color: orange;
+}
+.box4 {
+  background-color: orangered;
+}
+.box5 {
+  background-color: olivedrab;
+}
+.box6 {
+  background-color: orchid;
+}
